@@ -188,5 +188,26 @@ window.initParticles = function(pageType) {
 
 document.addEventListener('DOMContentLoaded', function() {
     window.initParticles();
+
+    // Hamburger Menu Logic
+    const mobileMenu = document.getElementById('mobile-menu');
+    const nav = document.querySelector('.nav');
+    if (mobileMenu && nav) {
+        mobileMenu.addEventListener('click', function() {
+            nav.classList.toggle('active');
+            const icon = mobileMenu.querySelector('i');
+            if (icon) {
+                if (nav.classList.contains('active')) {
+                    icon.classList.remove('fa-bars');
+                    icon.classList.add('fa-times');
+                    document.body.style.overflow = 'hidden'; // Prevent background scrolling
+                } else {
+                    icon.classList.remove('fa-times');
+                    icon.classList.add('fa-bars');
+                    document.body.style.overflow = '';
+                }
+            }
+        });
+    }
 });
 
