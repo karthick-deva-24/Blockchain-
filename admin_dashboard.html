@@ -1,0 +1,150 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Dashboard - Cryption</title>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://unpkg.com/sheryjs/dist/Shery.css" />
+    <link rel="stylesheet" href="css/style.css">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body data-page="home" data-dashboard="admin">
+    <div id="particles-js" style="z-index: 1;"></div>
+    
+    <div class="dashboard-layout">
+        <!-- Sidebar -->
+        <aside class="sidebar">
+            <div class="logo"><a href="admin_dashboard.html"><img src="images/logo_0024.webp" alt="Cryption Logo" class="site-logo"></a></div>
+            
+            <div class="sidebar-menu">
+                <div class="sidebar-link active" data-target="tab-overview"><span style="margin-right: 10px;"><i class="fas fa-chart-bar"></i></span> System Overview</div>
+                <div class="sidebar-link" data-target="tab-users"><span style="margin-right: 10px;"><i class="fas fa-users"></i></span> Manage Users</div>
+                <div class="sidebar-link" data-target="tab-nodes"><span style="margin-right: 10px;"><i class="fas fa-globe"></i></span> Blockchain Nodes</div>
+                <div class="sidebar-link" data-target="tab-reports"><span style="margin-right: 10px;"><i class="fas fa-chart-line"></i></span> Analytics & Reports</div>
+                <div class="sidebar-link" data-target="tab-settings"><span style="margin-right: 10px;"><i class="fas fa-cog"></i></span> System Settings</div>
+            </div>
+            
+            <div class="sidebar-footer">
+                <a href="#" id="logout-btn" class="btn-primary" style="width: 100%; display: block; text-align: center; border-radius: 8px; padding: 0.8rem;">Logout</a>
+            </div>
+        </aside>
+
+        <!-- Main Content -->
+        <main class="dashboard-main">
+            <header class="dashboard-nav">
+                <h2>Admin Control Panel</h2>
+                <div style="display: flex; align-items: center; gap: 2rem;">
+                    <div class="nav-notifications" style="font-size: 1.2rem; cursor: pointer; display: flex; gap: 1rem;">
+                        <span title="Notifications"><i class="fas fa-bell"></i></span>
+                        <span title="Messages"><i class="fas fa-envelope"></i></span>
+                    </div>
+                    <div class="profile-widget">
+                        <span id="profile-role" style="font-weight: 700; color: #14b8a6;">Admin</span>
+                        <span id="profile-email" style="color: #a0aab2; font-size: 0.9rem;">email@example.com</span>
+                        <div id="profile-avatar" class="profile-avatar">A</div>
+                    </div>
+                </div>
+            </header>
+
+            <div class="dashboard-content">
+                <!-- Overview Tab -->
+                <div id="tab-overview" class="tab-pane active">
+                    <h3>System Overview</h3>
+                    <p style="color: #a0aab2; margin-bottom: 2rem;">Welcome to the Cryption Administration panel.</p>
+                    <div class="grid" style="grid-template-columns: repeat(3, 1fr);">
+                        <div class="card">
+                            <h4 style="color: #14b8a6;">Total Users</h4>
+                            <h2>12,458</h2>
+                        </div>
+                        <div class="card">
+                            <h4 style="color: #14b8a6;">Active Nodes</h4>
+                            <h2>1,024</h2>
+                        </div>
+                        <div class="card">
+                            <h4 style="color: #14b8a6;">System Load</h4>
+                            <h2>24%</h2>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Manage Users Tab -->
+                <div id="tab-users" class="tab-pane">
+                    <h3>Manage Users</h3>
+                    <p style="color: #a0aab2; margin-bottom: 2rem;">View and edit user permissions.</p>
+                    <div class="card">
+                        <table style="width: 100%; text-align: left; border-collapse: collapse;">
+                            <tr style="border-bottom: 1px solid rgba(255,255,255,0.1);">
+                                <th style="padding: 1rem;">ID</th>
+                                <th style="padding: 1rem;">Email</th>
+                                <th style="padding: 1rem;">Role</th>
+                                <th style="padding: 1rem;">Action</th>
+                            </tr>
+                            <tr>
+                                <td style="padding: 1rem;">#001</td>
+                                <td style="padding: 1rem;">john@example.com</td>
+                                <td style="padding: 1rem;">User</td>
+                                <td style="padding: 1rem;"><a href="404.html" style="color: #14b8a6;">Edit</a></td>
+                            </tr>
+                            <tr>
+                                <td style="padding: 1rem;">#002</td>
+                                <td style="padding: 1rem;">jane@example.com</td>
+                                <td style="padding: 1rem;">Admin</td>
+                                <td style="padding: 1rem;"><a href="404.html" style="color: #14b8a6;">Edit</a></td>
+                            </tr>
+                        </table>
+                    </div>
+                </div>
+
+                <!-- Nodes Tab -->
+                <div id="tab-nodes" class="tab-pane">
+                    <h3>Blockchain Nodes</h3>
+                    <p style="color: #a0aab2; margin-bottom: 2rem;">Monitor global network infrastructure.</p>
+                    <div id="node-network-map" class="card" style="height: 300px; position: relative; overflow: hidden; background: linear-gradient(135deg, rgba(20, 184, 166, 0.05), rgba(0,0,0,0.4)); border: 1px solid rgba(20, 184, 166, 0.2);">
+                        <div style="position: absolute; top: 1rem; left: 1rem; z-index: 2; pointer-events: none;">
+                            <span style="color: #14b8a6; font-weight: 600; font-size: 0.9rem;"><i class="fas fa-globe-americas"></i> Live Global Network</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Settings Tab -->
+                <div id="tab-settings" class="tab-pane">
+                    <h3>System Settings</h3>
+                    <p style="color: #a0aab2; margin-bottom: 2rem;">Configure global platform parameters.</p>
+                    <div class="card">
+                        <div class="form-group">
+                            <label>Platform Name</label>
+                            <input type="text" class="form-control" value="Cryption">
+                        </div>
+                        <div class="form-group">
+                            <label>Maintenance Mode</label>
+                            <select class="form-control">
+                                <option>Off</option>
+                                <option>On</option>
+                            </select>
+                        </div>
+                        <button class="btn-primary" style="margin-top: 1rem;" onclick="window.location.href='404.html';">Save Changes</button>
+                    </div>
+                </div>
+
+                <!-- Reports Tab -->
+                <div id="tab-reports" class="tab-pane">
+                    <h3>Analytics & Reports</h3>
+                    <p style="color: #a0aab2; margin-bottom: 2rem;">In-depth metrics and data analysis.</p>
+                    <div class="card" style="height: 300px; display: flex; align-items: center; justify-content: center; background: rgba(0,0,0,0.2);">
+                        <div style="text-align: center;">
+                            <span style="font-size: 3rem; color: #14b8a6;"><i class="fas fa-chart-line"></i></span>
+                            <p style="color: #a0aab2; margin-top: 1rem;">System analytics processing. Data will populate shortly.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
+    <script src="js/script.js"></script>
+    <script src="js/dashboard.js"></script>
+</body>
+</html>

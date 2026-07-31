@@ -1,0 +1,152 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Dashboard - Cryption</title>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://unpkg.com/sheryjs/dist/Shery.css" />
+    <link rel="stylesheet" href="css/style.css">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body data-page="home" data-dashboard="user">
+    <div id="particles-js" style="z-index: 1;"></div>
+    
+    <div class="dashboard-layout">
+        <!-- Sidebar -->
+        <aside class="sidebar">
+            <div class="logo"><a href="user_dashboard.html"><img src="images/logo_0024.webp" alt="Cryption Logo" class="site-logo"></a></div>
+            
+            <div class="sidebar-menu">
+                <div class="sidebar-link active" data-target="tab-portfolio"><span style="margin-right: 10px;"><i class="fas fa-briefcase"></i></span> My Portfolio</div>
+                <div class="sidebar-link" data-target="tab-transactions"><span style="margin-right: 10px;"><i class="fas fa-money-bill-wave"></i></span> Transactions</div>
+                <div class="sidebar-link" data-target="tab-staking"><span style="margin-right: 10px;"><i class="fas fa-university"></i></span> Yield Staking</div>
+                <div class="sidebar-link" data-target="tab-security"><span style="margin-right: 10px;"><i class="fas fa-shield-alt"></i></span> Security</div>
+                <div class="sidebar-link" data-target="tab-support"><span style="margin-right: 10px;"><i class="fas fa-ticket-alt"></i></span> Support Tickets</div>
+            </div>
+            
+            <div class="sidebar-footer">
+                <a href="#" id="logout-btn" class="btn-primary" style="width: 100%; display: block; text-align: center; border-radius: 8px; padding: 0.8rem;">Logout</a>
+            </div>
+        </aside>
+
+        <!-- Main Content -->
+        <main class="dashboard-main">
+            <header class="dashboard-nav">
+                <h2>User Portal</h2>
+                <div style="display: flex; align-items: center; gap: 2rem;">
+                    <div class="nav-notifications" style="font-size: 1.2rem; cursor: pointer; display: flex; gap: 1rem;">
+                        <span title="Notifications"><i class="fas fa-bell"></i></span>
+                        <span title="Messages"><i class="fas fa-envelope"></i></span>
+                    </div>
+                    <div class="profile-widget">
+                        <span id="profile-role" style="font-weight: 700; color: #14b8a6;">User</span>
+                        <span id="profile-email" style="color: #a0aab2; font-size: 0.9rem;">email@example.com</span>
+                        <div id="profile-avatar" class="profile-avatar">U</div>
+                    </div>
+                </div>
+            </header>
+
+            <div class="dashboard-content">
+                <!-- Portfolio Tab -->
+                <div id="tab-portfolio" class="tab-pane active">
+                    <h3>My Portfolio</h3>
+                    <p style="color: #a0aab2; margin-bottom: 2rem;">Overview of your digital assets.</p>
+                    <div class="grid" style="grid-template-columns: repeat(2, 1fr);">
+                        <div class="card" style="background: linear-gradient(135deg, rgba(20, 184, 166, 0.2), rgba(0,0,0,0.5)); border-color: #14b8a6;">
+                            <h4>Total Balance</h4>
+                            <h2 style="font-size: 2.5rem; margin-top: 1rem;">$12,450.00</h2>
+                            <p style="color: #14b8a6;">+5.4% this week</p>
+                        </div>
+                        <div class="card">
+                            <h4>Assets Distribution</h4>
+                            <ul style="list-style: none; padding: 0; margin-top: 1rem;">
+                                <li style="margin-bottom: 0.5rem;">Bitcoin (BTC) <span style="float:right;">65%</span></li>
+                                <li style="margin-bottom: 0.5rem;">Ethereum (ETH) <span style="float:right;">25%</span></li>
+                                <li>Solana (SOL) <span style="float:right;">10%</span></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Transactions Tab -->
+                <div id="tab-transactions" class="tab-pane">
+                    <h3>Recent Transactions</h3>
+                    <p style="color: #a0aab2; margin-bottom: 2rem;">Your latest deposits and withdrawals.</p>
+                    <div class="card">
+                        <table style="width: 100%; text-align: left; border-collapse: collapse;">
+                            <tr style="border-bottom: 1px solid rgba(255,255,255,0.1);">
+                                <th style="padding: 1rem;">Date</th>
+                                <th style="padding: 1rem;">Type</th>
+                                <th style="padding: 1rem;">Amount</th>
+                                <th style="padding: 1rem;">Status</th>
+                            </tr>
+                            <tr>
+                                <td style="padding: 1rem;">Today</td>
+                                <td style="padding: 1rem;">Deposit</td>
+                                <td style="padding: 1rem; color: #14b8a6;">+0.5 BTC</td>
+                                <td style="padding: 1rem;">Completed</td>
+                            </tr>
+                            <tr>
+                                <td style="padding: 1rem;">Yesterday</td>
+                                <td style="padding: 1rem;">Withdrawal</td>
+                                <td style="padding: 1rem; color: #eb5757;">-2.1 ETH</td>
+                                <td style="padding: 1rem;">Pending</td>
+                            </tr>
+                        </table>
+                    </div>
+                </div>
+
+                <!-- Security Tab -->
+                <div id="tab-security" class="tab-pane">
+                    <h3>Security Settings</h3>
+                    <p style="color: #a0aab2; margin-bottom: 2rem;">Manage your account safety.</p>
+                    <div class="card">
+                        <div class="form-group" style="display: flex; justify-content: space-between; align-items: center; border-bottom: 1px solid rgba(255,255,255,0.1); padding-bottom: 1rem; margin-bottom: 1rem;">
+                            <div>
+                                <h4 style="margin:0;">Two-Factor Authentication (2FA)</h4>
+                                <p style="color:#a0aab2; font-size:0.9rem; margin:0;">Secure your account with TOTP</p>
+                            </div>
+                            <button class="btn-primary" style="padding: 0.5rem 1rem;" onclick="window.location.href='404.html';">Enable</button>
+                        </div>
+                        <div class="form-group">
+                            <label>Change Password</label>
+                            <input type="password" class="form-control" placeholder="New Password" style="margin-bottom: 1rem;">
+                            <button class="btn-primary" onclick="window.location.href='404.html';">Update Password</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Support Tab -->
+                <div id="tab-support" class="tab-pane">
+                    <h3>Support Tickets</h3>
+                    <p style="color: #a0aab2; margin-bottom: 2rem;">Get help from the Cryption team.</p>
+                    <div class="card">
+                        <div style="text-align: center; padding: 2rem;">
+                            <p style="color: #a0aab2; margin-bottom: 1rem;">You have no active support tickets.</p>
+                            <button class="btn-primary" onclick="window.location.href='404.html';">Open New Ticket</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Staking Tab -->
+                <div id="tab-staking" class="tab-pane">
+                    <h3>Yield Staking</h3>
+                    <p style="color: #a0aab2; margin-bottom: 2rem;">Earn rewards by staking your crypto assets.</p>
+                    <div class="card" style="height: 300px; display: flex; align-items: center; justify-content: center; background: rgba(0,0,0,0.2);">
+                        <div style="text-align: center;">
+                            <span style="font-size: 3rem; color: #14b8a6;"><i class="fas fa-university"></i></span>
+                            <p style="color: #a0aab2; margin-top: 1rem;">Staking pools are being calculated. Check back soon.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
+    <script src="js/script.js"></script>
+    <script src="js/dashboard.js"></script>
+</body>
+</html>

@@ -1,0 +1,52 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login - Cryption</title>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://unpkg.com/sheryjs/dist/Shery.css" />
+    <link rel="stylesheet" href="css/style.css">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body data-page="login">
+    <div id="particles-js"></div>
+    
+    <div class="auth-wrapper">
+        <div class="auth-card">
+            <div class="logo" style="justify-content: center; margin-bottom: 1.5rem;"><a href="login.html"><img src="images/logo_0024.webp" alt="Cryption Logo" class="site-logo" style="height: 60px; max-width: 100%; object-fit: contain;"></a></div>
+            <h2>Welcome <span>Back</span></h2>
+            <form id="login-form">
+                <div class="form-group">
+                    <label for="role" style="text-align: left;">Select Role</label>
+                    <select id="role" class="form-control" required>
+                        <option value="user">User</option>
+                        <option value="admin">Administrator</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="email" style="text-align: left;">Email Address</label>
+                    <input type="email" id="email" class="form-control" placeholder="john@example.com" required>
+                </div>
+                <div class="form-group">
+                    <div style="display: flex; justify-content: space-between; margin-bottom: 0.5rem;">
+                        <label for="password" style="text-align: left; margin: 0;">Password</label>
+                        <a href="#" style="color: #14b8a6; font-size: 0.9rem; text-decoration: none;">Forgot password?</a>
+                    </div>
+                    <input type="password" id="password" class="form-control" placeholder="••••••••" required>
+                </div>
+                <button type="submit" class="btn-primary" style="width: 100%; margin-top: 1rem; border-radius: 10px; cursor: pointer;">Login</button>
+            </form>
+            <div style="margin-top: 2rem;">
+                <p style="color: #a0aab2; margin-bottom: 1rem;">Don't have an account? <a href="signup.html" style="color: #14b8a6; font-weight: 600;">Sign Up</a></p>
+                <a href="index.html" class="btn-text" style="font-size: 0.9rem;">&larr; Back to Home</a>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
+    <script src="js/script.js"></script>
+    <script src="js/auth.js"></script>
+</body>
+</html>
