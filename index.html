@@ -1,14 +1,15 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Cryption - Blockchain Website</title>
+    <title>Stackly - Blockchain Website</title>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;700;800&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="https://unpkg.com/sheryjs/dist/Shery.css" />
     <link rel="stylesheet" href="css/style.css">
 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 </head>
 <body data-page="home">
     <div id="particles-js"></div>
@@ -17,7 +18,7 @@
     <div data-barba="container" data-barba-namespace="home">
     <div class="wrapper">
         <header class="header">
-            <div class="logo"><a href="index.html"><img src="images/logo_0024.webp" alt="Cryption Logo" class="site-logo"></a></div>
+            <div class="logo"><a href="index.html"><img src="images/logo_0024.webp" alt="Brand Logo" class="site-logo" style="height: 50px; width: auto; max-width: 200px;"></a></div>
             <nav class="nav">
                 <ul>
                     <li><a href="index.html" class="active">Home</a></li>
@@ -50,13 +51,16 @@
                 <!-- Statistics Section for CountUp -->
         <section class="section" style="background: rgba(20, 184, 166, 0.05); text-align: center; border-top: 1px solid rgba(255,255,255,0.05); border-bottom: 1px solid rgba(255,255,255,0.05);">
             <div class="grid grid-3" style="gap: 2rem;">
-                <div class="stat-number-wrapper">`n                    <h2 style="font-size: 3rem; color: #14b8a6; margin-bottom: 0.5rem;">$<span class="stat-number" data-target="1000">0</span>M+</h2>
+                <div class="stat-number-wrapper">
+                    <h2 style="font-size: 3rem; color: #14b8a6; margin-bottom: 0.5rem;">$<span class="stat-number" data-target="1000">0</span>M+</h2>
                     <p style="color: #a0aab2; font-size: 1.1rem;">Trading Volume</p>
                 </div>
-                <div class="stat-number-wrapper">`n                    <h2 style="font-size: 3rem; color: #c99339; margin-bottom: 0.5rem;"><span class="stat-number" data-target="5000000">0</span>+</h2>
+                <div class="stat-number-wrapper">
+                    <h2 style="font-size: 3rem; color: #c99339; margin-bottom: 0.5rem;"><span class="stat-number" data-target="5000000">0</span>+</h2>
                     <p style="color: #a0aab2; font-size: 1.1rem;">Transactions</p>
                 </div>
-                <div class="stat-number-wrapper">`n                    <h2 style="font-size: 3rem; color: #4a90e2; margin-bottom: 0.5rem;"><span class="stat-number" data-target="150">0</span>K+</h2>
+                <div class="stat-number-wrapper">
+                    <h2 style="font-size: 3rem; color: #4a90e2; margin-bottom: 0.5rem;"><span class="stat-number" data-target="150">0</span>K+</h2>
                     <p style="color: #a0aab2; font-size: 1.1rem;">Active Users</p>
                 </div>
             </div>
@@ -65,10 +69,19 @@
         <!-- 2. Trusted Partners -->
         <section class="section">
             <h2 class="section-title">Trusted by Global Businesses & <span>Innovative Startups</span></h2>
-            <div class="grid">
-                <div class="card"><h3 class="card-title">Partner Alpha</h3><p class="card-text">Leading the future of decentralized finance globally.</p></div>
-                <div class="card"><h3 class="card-title">Crypto Nexus</h3><p class="card-text">Scaling Web3 infrastructure for modern enterprises.</p></div>
-                <div class="card"><h3 class="card-title">Block Ventures</h3><p class="card-text">Investing in cutting-edge smart contract platforms.</p></div>
+            <div class="marquee-container" data-aos="fade-up">
+                <div class="marquee-content">
+                    <h3>Acme Corp</h3>
+                    <h3>Global Tech</h3>
+                    <h3>Nexus Labs</h3>
+                    <h3>BlockChain Inc</h3>
+                    <h3>Future Finance</h3>
+                    <h3>Acme Corp</h3>
+                    <h3>Global Tech</h3>
+                    <h3>Nexus Labs</h3>
+                    <h3>BlockChain Inc</h3>
+                    <h3>Future Finance</h3>
+                </div>
             </div>
         </section>
 
@@ -89,67 +102,150 @@
         <!-- 4. Our Blockchain Services -->
         <section class="section">
             <h2 class="section-title">Comprehensive Blockchain Solutions for <span>Every Industry</span></h2>
-            <div class="grid">
-                <div class="card">
-                    <div class="card-icon"><i class="fas fa-cog"></i></div>
-                    <h3 class="card-title">Smart Contracts</h3>
-                    <p class="card-text">Automate your business logic with secure, auditable, and efficient smart contracts deployed on modern networks.</p>
+            <div class="bento-grid" data-aos="fade-up">
+                <div class="bento-item bento-large">
+                    <img src="images/blockchain_banner.webp" alt="Smart Contracts">
+                    <div class="bento-content">
+                        <h3>Smart Contracts</h3>
+                        <p>Automate your business logic with secure, auditable, and efficient smart contracts deployed on modern networks.</p>
+                    </div>
                 </div>
-                <div class="card">
-                    <div class="card-icon"><i class="fas fa-link"></i></div>
-                    <h3 class="card-title">Custom Blockchains</h3>
-                    <p class="card-text">Build bespoke private or public blockchain networks tailored to your specific performance and governance needs.</p>
+                <div class="bento-item bento-tall">
+                    <img src="images/blockchain_finance.webp" alt="Custom Blockchains">
+                    <div class="bento-content">
+                        <h3>Custom Blockchains</h3>
+                        <p>Build bespoke private or public blockchain networks tailored to your specific performance and governance needs.</p>
+                    </div>
                 </div>
-                <div class="card">
-                    <div class="card-icon"><i class="fas fa-mobile-alt"></i></div>
-                    <h3 class="card-title">DApp Development</h3>
-                    <p class="card-text">Engage your users with beautiful, responsive decentralized applications powered by Web3 technology.</p>
+                <div class="bento-item bento-wide">
+                    <img src="images/blockchain_health.webp" alt="DApp Development">
+                    <div class="bento-content">
+                        <h3>DApp Development</h3>
+                        <p>Engage your users with beautiful, responsive decentralized applications powered by Web3 technology.</p>
+                    </div>
+                </div>
+                <div class="bento-item bento-box">
+                    <img src="images/blockchain_supply.webp" alt="Supply Chain">
+                    <div class="bento-content">
+                        <h3>Supply Chain</h3>
+                        <p>Immutable tracking and transparency for global logistics and auditing.</p>
+                    </div>
                 </div>
             </div>
         </section>
+
         <!-- 5. Core Features -->
         <section class="section section-dark">
             <h2 class="section-title">Powerful Features That <span>Drive Innovation</span></h2>
-            <div class="grid">
-                <div class="card"><h3 class="card-title">Immutability</h3><p class="card-text">Guarantee data integrity with tamper-proof ledgers.</p></div>
-                <div class="card"><h3 class="card-title">High Throughput</h3><p class="card-text">Scale globally with thousands of transactions per second.</p></div>
-                <div class="card"><h3 class="card-title">Interoperability</h3><p class="card-text">Seamlessly connect with existing enterprise systems and other chains.</p></div>
-                <div class="card"><h3 class="card-title">Advanced Security</h3><p class="card-text">Military-grade cryptography to protect your digital assets.</p></div>
+            <div class="flip-grid">
+                <div class="flip-card" data-aos="zoom-in" data-aos-delay="0">
+                    <div class="flip-card-inner">
+                        <div class="flip-card-front">
+                            <img src="images/blockchain_supply.webp" alt="Feature">
+                            <div class="front-title">Immutability</div>
+                        </div>
+                        <div class="flip-card-back">
+                            <h3>Immutability</h3>
+                            <p>Guarantee data integrity with tamper-proof ledgers ensuring completely auditable and secure transactions across your entire business ecosystem.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="flip-card" data-aos="zoom-in" data-aos-delay="100">
+                    <div class="flip-card-inner">
+                        <div class="flip-card-front">
+                            <img src="images/blockchain_finance.webp" alt="Feature">
+                            <div class="front-title">High Throughput</div>
+                        </div>
+                        <div class="flip-card-back">
+                            <h3>High Throughput</h3>
+                            <p>Scale globally with thousands of transactions per second, allowing enterprise applications to operate without latency or network congestion.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="flip-card" data-aos="zoom-in" data-aos-delay="200">
+                    <div class="flip-card-inner">
+                        <div class="flip-card-front">
+                            <img src="images/blockchain_token.webp" alt="Feature">
+                            <div class="front-title">Interoperability</div>
+                        </div>
+                        <div class="flip-card-back">
+                            <h3>Interoperability</h3>
+                            <p>Seamlessly connect with existing enterprise systems and other blockchain networks through our advanced cross-chain protocols.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="flip-card" data-aos="zoom-in" data-aos-delay="300">
+                    <div class="flip-card-inner">
+                        <div class="flip-card-front">
+                            <img src="images/blockchain_health.webp" alt="Feature">
+                            <div class="front-title">Advanced Security</div>
+                        </div>
+                        <div class="flip-card-back">
+                            <h3>Advanced Security</h3>
+                            <p>Military-grade cryptography designed to protect your digital assets and user data from next-generation cyber threats.</p>
+                        </div>
+                    </div>
+                </div>
             </div>
         </section>
 
         <!-- 6. Industries We Serve -->
-        <section class="section">
-            <h2 class="section-title">Blockchain Solutions Tailored for <span>Every Sector</span></h2>
-            <div class="grid">
-                <div class="card"><div class="image-block" style="background-image: url('images/blockchain_finance.webp');"></div><h3 class="card-title">Finance & DeFi</h3></div>
-                <div class="card"><div class="image-block" style="background-image: url('images/blockchain_supply.webp');"></div><h3 class="card-title">Supply Chain</h3></div>
-                <div class="card"><div class="image-block" style="background-image: url('images/blockchain_health.webp');"></div><h3 class="card-title">Healthcare</h3></div>
-            </div>
-        </section>
+
 
         <!-- 7. Development Process -->
         <section class="section section-dark">
             <h2 class="section-title">Our Proven Blockchain <span>Development Journey</span></h2>
-            <div class="grid">
-                <div class="card"><h3 class="card-title">1. Discovery</h3><p class="card-text">Analyzing your requirements and defining the optimal blockchain architecture.</p></div>
-                <div class="card"><h3 class="card-title">2. Prototyping</h3><p class="card-text">Building proof-of-concepts to validate technical feasibility.</p></div>
-                <div class="card"><h3 class="card-title">3. Development</h3><p class="card-text">Agile engineering of smart contracts, nodes, and front-end DApps.</p></div>
-                <div class="card"><h3 class="card-title">4. Deployment</h3><p class="card-text">Rigorous auditing and seamless mainnet launch with ongoing support.</p></div>
+            <div class="timeline">
+                <div class="timeline-item" data-aos="fade-right">
+                    <div class="timeline-content">
+                        <img src="images/blockchain_banner.webp" alt="Discovery">
+                        <h3>1. Discovery</h3>
+                        <p>Analyzing your requirements and defining the optimal blockchain architecture tailored to your business model.</p>
+                    </div>
+                </div>
+                <div class="timeline-item" data-aos="fade-left">
+                    <div class="timeline-content">
+                        <img src="images/blockchain_token.webp" alt="Prototyping">
+                        <h3>2. Prototyping</h3>
+                        <p>Building proof-of-concepts to validate technical feasibility and refine the user experience early on.</p>
+                    </div>
+                </div>
+                <div class="timeline-item" data-aos="fade-right">
+                    <div class="timeline-content">
+                        <img src="images/blockchain_finance.webp" alt="Development">
+                        <h3>3. Development</h3>
+                        <p>Agile engineering of secure smart contracts, robust validator nodes, and responsive front-end DApps.</p>
+                    </div>
+                </div>
+                <div class="timeline-item" data-aos="fade-left">
+                    <div class="timeline-content">
+                        <img src="images/blockchain_health.webp" alt="Deployment">
+                        <h3>4. Deployment</h3>
+                        <p>Rigorous smart contract auditing, seamless mainnet launch, and continuous ongoing support.</p>
+                    </div>
+                </div>
             </div>
         </section>
 
         <!-- 8. Success Stories -->
         <section class="section">
             <h2 class="section-title">Real Results from <span>Real Projects</span></h2>
-            <div class="grid">
-                <div class="card">
-                    <p class="card-text">"Cryption delivered our NFT marketplace on time and perfectly secure. Their expertise is unmatched."</p>
-                    <h3 class="card-title" style="margin-top: 1rem; font-size:1.1rem;">- Sarah J., CEO of ArtChain</h3>
+            <div class="sticky-wrapper">
+                <div class="sticky-card">
+                    <img src="images/avatar_ceo.webp" alt="Sarah J">
+                    <div class="sticky-card-content">
+                        <h3>ArtChain Ecosystem</h3>
+                        <h4>Sarah J., CEO of ArtChain</h4>
+                        <p>"Stackly delivered our NFT marketplace on time and perfectly secure. Their expertise is unmatched in the Web3 space. The transition from Web2 to Web3 was entirely frictionless for our userbase thanks to their elegant architecture."</p>
+                    </div>
                 </div>
-                <div class="card">
-                    <p class="card-text">"Thanks to their custom supply chain blockchain, we reduced tracking errors by 99%."</p>
-                    <h3 class="card-title" style="margin-top: 1rem; font-size:1.1rem;">- David M., Global Logistics</h3>
+                <div class="sticky-card" style="top: 150px;">
+                    <img src="images/avatar_cto.webp" alt="David M">
+                    <div class="sticky-card-content">
+                        <h3>Global Logistics Network</h3>
+                        <h4>David M., VP of Global Logistics</h4>
+                        <p>"Thanks to their custom supply chain blockchain, we reduced tracking errors by 99% across multiple international borders. Our stakeholders now have real-time visibility into the entire lifecycle of our shipments."</p>
+                    </div>
                 </div>
             </div>
         </section>
@@ -157,26 +253,31 @@
         <!-- 9. Latest Insights -->
         <section class="section section-dark">
             <h2 class="section-title">Explore the Latest Blockchain <span>Trends & Innovations</span></h2>
-            <div class="grid">
-                <div class="card">
-                    <div class="image-block" style="background-image: url('images/blockchain_token.webp');"></div>
-                    <h3 class="card-title">The Future of Zero-Knowledge Proofs</h3>
-                    <p class="card-text">How ZKPs are revolutionizing privacy and scalability in modern blockchains.</p>
+            <div class="spotlight-wrapper">
+                <div class="spotlight-card">
+                    <div class="spotlight-content">
+                        <img src="images/blockchain_token.webp" alt="Insights">
+                        <h3>The Future of Zero-Knowledge Proofs</h3>
+                        <p>How ZKPs are revolutionizing privacy and scalability in modern blockchains, allowing enterprise applications to verify data without exposing sensitive trade secrets.</p>
+                    </div>
                 </div>
-                <div class="card">
-                    <div class="image-block" style="background-image: url('images/blockchain_token.webp');"></div>
-                    <h3 class="card-title">Tokenomics 101</h3>
-                    <p class="card-text">A beginner's guide to designing sustainable token economies for your Web3 project.</p>
+                <div class="spotlight-card">
+                    <div class="spotlight-content">
+                        <img src="images/blockchain_finance.webp" alt="Insights">
+                        <h3>Tokenomics 101</h3>
+                        <p>A comprehensive beginner's guide to designing sustainable token economies for your Web3 project, focusing on utility, governance, and long-term value capture.</p>
+                    </div>
                 </div>
             </div>
         </section>
+        
         <!-- Footer -->
         <footer class="footer">
             <div id="particles-footer"></div>
             <div class="footer-content">
                 <div class="footer-grid">
                     <div class="footer-col">
-                        <div class="logo" style="margin-bottom: 1rem;"><a href="index.html"><img src="images/logo_0024.webp" alt="Cryption Logo" class="site-logo"></a></div>
+                        <div class="logo" style="margin-bottom: 1rem;"><a href="index.html"><img src="images/logo_0024.webp" alt="Brand Logo" class="site-logo" style="height: 50px; width: auto; max-width: 200px;"></a></div>
                         <p>Empowering the decentralized future with secure and scalable blockchain solutions.</p>
                         <div class="social-icons" style="margin-top: 1.5rem;">
                             <a href="404.html" aria-label="Twitter">
@@ -201,6 +302,24 @@
                         </ul>
                     </div>
                     <div class="footer-col">
+                        <h4>Resources</h4>
+                        <ul>
+                            <li><a href="404.html">Whitepapers</a></li>
+                            <li><a href="404.html">Documentation</a></li>
+                            <li><a href="404.html">API Reference</a></li>
+                            <li><a href="404.html">Community</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-col">
+                        <h4>Company</h4>
+                        <ul>
+                            <li><a href="404.html">Careers</a></li>
+                            <li><a href="404.html">Team</a></li>
+                            <li><a href="404.html">Partners</a></li>
+                            <li><a href="404.html">Press</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-col">
                         <h4>Legal</h4>
                         <ul>
                             <li><a href="404.html">Privacy Policy</a></li>
@@ -216,7 +335,7 @@
                     </div>
                 </div>
                 <div class="footer-bottom">
-                    <p>&copy; 2026 Cryption. All rights reserved.</p>
+                    <p>&copy; 2026 Stackly. All rights reserved.</p>
                 </div>
             </div>
         </footer>
@@ -257,8 +376,11 @@
     <!-- Custom Scripts -->
     <script src="js/script.js"></script>
     <script src="js/animations.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
 </body>
 </html>
+
+
 
 
 

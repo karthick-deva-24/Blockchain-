@@ -1,14 +1,15 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Services - Cryption</title>
+    <title>Services - Stackly</title>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;700;800&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="https://unpkg.com/sheryjs/dist/Shery.css" />
+    <link rel="stylesheet" href="https://unpkg.com/sheryjs/dist/Shery.css" />
     <link rel="stylesheet" href="css/style.css">
 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 </head>
 <body data-page="services">
     <div id="particles-js"></div>
@@ -17,7 +18,7 @@
     <div data-barba="container" data-barba-namespace="services">
     <div class="wrapper">
         <header class="header">
-            <div class="logo"><a href="services.html"><img src="images/logo_0024.webp" alt="Cryption Logo" class="site-logo"></a></div>
+            <div class="logo"><a href="services.html"><img src="images/logo_0024.webp" alt="Brand Logo" class="site-logo" style="height: 50px; width: auto; max-width: 200px;"></a></div>
             <nav class="nav">
                 <ul>
                     <li><a href="index.html">Home</a></li>
@@ -33,14 +34,19 @@
             </div>
             <div class="header-actions">
                 <a href="login.html" class="btn-primary">LOGIN</a>
-                </div>
+            </div>
         </header>
 
         <!-- 1. Services Overview -->
-        <main class="page-header">
-            <h1>Innovative Blockchain</h1>
-            <p>Development Services</p>
-        </main>
+        <main class="page-header hero-split" style="display: flex; align-items: center; justify-content: space-between; max-width: 1200px; margin: 0 auto; padding: 100px 20px; gap: 40px; text-align: left;">
+    <div class="hero-text" style="flex: 1;">
+        <h1 style="font-size: 3.5rem; margin-bottom: 1rem; color: #fff;">Our Services</h1>
+        <p style="font-size: 1.2rem; color: #a0aab2;">Enterprise-Grade Blockchain Solutions</p>
+    </div>
+    <div class="hero-image" style="flex: 1; text-align: right;">
+        <img src="images/hero_services.webp" alt="Our Services" style="max-width: 100%; border-radius: 20px; box-shadow: 0 20px 40px rgba(0,0,0,0.5);">
+    </div>
+</main>
 
         <!-- 2. Custom Blockchain Development -->
         <section class="section">
@@ -48,76 +54,154 @@
             <div class="grid grid-2" style="align-items: center;">
                 <div>
                     <div class="image-block" style="background-image: url('images/blockchain_banner.webp'); height: 350px;"></div>
-                    </div>
-                <div>
-                    <p class="card-text" style="font-size: 1.2rem;">We architect and build customized Layer 1 and Layer 2 blockchain networks from scratch, ensuring high TPS, minimal latency, and robust Byzantine Fault Tolerance mechanisms tailored specifically for your use case.</p>
-                    </div>
                 </div>
+                <div>
+                    <p style="font-size: 1.2rem; margin-bottom: 2rem;">We architect and build customized Layer 1 and Layer 2 blockchain networks from scratch, ensuring high TPS, minimal latency, and robust Byzantine Fault Tolerance mechanisms tailored specifically for your use case.</p>
+                </div>
+            </div>
         </section>
 
         <!-- 3. Smart Contract Development -->
         <section class="section section-dark">
             <h2 class="section-title">Automate Business Processes with <span>Smart Contracts</span></h2>
-            <div class="grid">
-                <div class="card">
-                    <div class="card-icon"><i class="fas fa-scroll"></i></div><h3 class="card-title">Development</h3>
-                    <p class="card-text">Writing efficient, gas-optimized Solidity and Rust smart contracts.</p>
-                    </div>
-                <div class="card">
-                    <div class="card-icon"><i class="fas fa-shield-alt"></i></div><h3 class="card-title">Auditing</h3>
-                    <p class="card-text">Rigorous security audits using formal verification and manual testing.</p>
+            <div class="flip-grid">
+                <div class="flip-card">
+                    <div class="flip-card-inner">
+                        <div class="flip-card-front">
+                            <img src="images/blockchain_supply.webp" alt="Development">
+                            <div class="front-title">Development</div>
+                        </div>
+                        <div class="flip-card-back">
+                            <h3>Development</h3>
+                            <p>Writing efficient, gas-optimized Solidity and Rust smart contracts tailored to your exact enterprise business logic.</p>
+                        </div>
                     </div>
                 </div>
+                <div class="flip-card">
+                    <div class="flip-card-inner">
+                        <div class="flip-card-front">
+                            <img src="images/blockchain_health.webp" alt="Auditing">
+                            <div class="front-title">Auditing</div>
+                        </div>
+                        <div class="flip-card-back">
+                            <h3>Auditing</h3>
+                            <p>Rigorous security audits using formal verification and manual testing to eliminate vulnerabilities before deployment.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </section>
 
         <!-- 4. Decentralized Applications (DApps) -->
         <section class="section">
             <h2 class="section-title">Create Powerful <span>Decentralized Applications</span></h2>
-            <div class="grid">
-                <div class="card" style="text-align: center;">
-                    <p class="card-text" style="font-size: 1.2rem;">We build front-end interfaces that connect seamlessly to Web3 wallets (MetaMask, WalletConnect) and blockchain networks, delivering a Web2-like user experience with Web3 security.</p>
+            <div class="spotlight-wrapper" style="max-width: 800px; margin: 0 auto;">
+                <div class="spotlight-card" style="text-align: center;">
+                    <div class="spotlight-content">
+                        <img src="images/blockchain_banner.webp" alt="DApps">
+                        <h3>DApp Development</h3>
+                        <p style="font-size: 1.2rem;">We build front-end interfaces that connect seamlessly to Web3 wallets (MetaMask, WalletConnect) and blockchain networks, delivering a Web2-like user experience with Web3 security.</p>
                     </div>
                 </div>
+            </div>
         </section>
 
         <!-- 5. Cryptocurrency Development -->
         <section class="section section-dark">
             <h2 class="section-title">Cryptocurrency & <span>Token Development Solutions</span></h2>
-            <div class="grid">
-                <div class="card"><h3 class="card-title">ERC-20 / SPL Tokens</h3><p class="card-text">Utility and governance tokens for your ecosystem.</p></div>
-                <div class="card"><h3 class="card-title">Stablecoins</h3><p class="card-text">Algorithmic and fiat-collateralized stablecoin infrastructure.</p></div>
-                <div class="card"><h3 class="card-title">Tokenomics</h3><p class="card-text">Mathematical modeling of supply, emission, and burning mechanics.</p></div>
+            <div class="bento-grid">
+                <div class="bento-item bento-tall">
+                    <img src="images/blockchain_token.webp" alt="ERC-20 / SPL Tokens">
+                    <div class="bento-content">
+                        <h3>ERC-20 / SPL Tokens</h3>
+                        <p>Utility and governance tokens to power your decentralized ecosystem.</p>
+                    </div>
                 </div>
+                <div class="bento-item bento-wide">
+                    <img src="images/blockchain_finance.webp" alt="Stablecoins">
+                    <div class="bento-content">
+                        <h3>Stablecoins</h3>
+                        <p>Algorithmic and fiat-collateralized stablecoin infrastructure designed for high transaction volume.</p>
+                    </div>
+                </div>
+                <div class="bento-item bento-wide">
+                    <img src="images/blockchain_supply.webp" alt="Tokenomics">
+                    <div class="bento-content">
+                        <h3>Tokenomics</h3>
+                        <p>Mathematical modeling of supply, emission, and burning mechanics ensuring long-term sustainability.</p>
+                    </div>
+                </div>
+            </div>
         </section>
 
         <!-- 6. NFT Marketplace Development -->
         <section class="section">
             <h2 class="section-title">Build Modern <span>NFT Platforms</span></h2>
-            <div class="grid">
-                <div class="card"><h3 class="card-title">ERC-721 & ERC-1155</h3><p class="card-text">Standard and semi-fungible token creation.</p></div>
-                <div class="card"><h3 class="card-title">Custom Marketplaces</h3><p class="card-text">Bespoke trading platforms with advanced bidding and royalty splits.</p></div>
+            <div class="expand-container" style="max-width: 900px; margin: 0 auto;">
+                <div class="expand-card">
+                    <img src="images/blockchain_banner.webp" alt="ERC-721">
+                    <div class="expand-content">
+                        <h3>ERC-721 & ERC-1155</h3>
+                        <p>Standard and semi-fungible token creation for dynamic NFT collections.</p>
+                    </div>
                 </div>
+                <div class="expand-card">
+                    <img src="images/blockchain_health.webp" alt="Marketplaces">
+                    <div class="expand-content">
+                        <h3>Custom Marketplaces</h3>
+                        <p>Bespoke trading platforms with advanced bidding, fractionalization, and automated royalty splits.</p>
+                    </div>
+                </div>
+            </div>
         </section>
 
         <!-- 7. Blockchain Consulting -->
         <section class="section section-dark">
             <h2 class="section-title">Strategic Blockchain <span>Consulting Services</span></h2>
-            <div class="grid">
-                <div class="card" style="text-align: center; border-color: rgba(20, 184, 166, 0.5);">
-                    <p class="card-text" style="font-size: 1.2rem;">Not sure where to start? Our experts provide deep technical roadmapping, feasibility studies, and architectural design to ensure your Web3 pivot is successful.</p>
+            <div class="spotlight-wrapper" style="max-width: 800px; margin: 0 auto;">
+                <div class="spotlight-card" style="text-align: center;">
+                    <div class="spotlight-content">
+                        <img src="images/blockchain_supply.webp" alt="Consulting">
+                        <h3>Enterprise Roadmapping</h3>
+                        <p style="font-size: 1.2rem;">Not sure where to start? Our experts provide deep technical roadmapping, feasibility studies, and architectural design to ensure your Web3 pivot is successful and secure.</p>
                     </div>
                 </div>
+            </div>
         </section>
 
         <!-- 8. Web3 Integration -->
         <section class="section">
             <h2 class="section-title">Connect Your Business to the <span>Web3 Ecosystem</span></h2>
-            <div class="grid">
-                <div class="card"><h3 class="card-title">Wallet Integration</h3></div>
-                <div class="card"><h3 class="card-title">On-Chain Data Analytics</h3></div>
-                <div class="card"><h3 class="card-title">DeFi Protocol Hooks</h3></div>
-                <div class="card"><h3 class="card-title">Cross-Chain Bridges</h3></div>
+            <div class="bento-grid grid-4">
+                <div class="bento-item bento-tall">
+                    <img src="images/blockchain_token.webp" alt="Wallet">
+                    <div class="bento-content">
+                        <h3>Wallet Integration</h3>
+                        <p>Seamlessly integrate various Web3 wallets into your platform.</p>
+                    </div>
                 </div>
+                <div class="bento-item bento-tall">
+                    <img src="images/blockchain_finance.webp" alt="Analytics">
+                    <div class="bento-content">
+                        <h3>On-Chain Analytics</h3>
+                        <p>Real-time data indexing and analytics for your smart contracts.</p>
+                    </div>
+                </div>
+                <div class="bento-item bento-tall">
+                    <img src="images/blockchain_health.webp" alt="DeFi">
+                    <div class="bento-content">
+                        <h3>DeFi Protocol Hooks</h3>
+                        <p>Integrate with Uniswap, Aave, and other lending/DEX protocols.</p>
+                    </div>
+                </div>
+                <div class="bento-item bento-tall">
+                    <img src="images/blockchain_supply.webp" alt="Bridges">
+                    <div class="bento-content">
+                        <h3>Cross-Chain Bridges</h3>
+                        <p>Enable asset transfer and interoperability between different blockchains.</p>
+                    </div>
+                </div>
+            </div>
         </section>
 
         <!-- 9. Enterprise Blockchain Solutions -->
@@ -125,27 +209,28 @@
             <h2 class="section-title">Digital Transformation for <span>Modern Enterprises</span></h2>
             <div class="grid grid-2" style="align-items: center;">
                 <div>
-                    <p class="card-text" style="font-size: 1.2rem; margin-bottom: 2rem;">Utilizing permissioned frameworks like Hyperledger Fabric and R3 Corda, we build systems that offer the transparency of blockchain with the privacy required by enterprise compliance (GDPR/HIPAA).</p>
-                    </div>
+                    <p style="font-size: 1.2rem; margin-bottom: 2rem;">Utilizing permissioned frameworks like Hyperledger Fabric and R3 Corda, we build systems that offer the transparency of blockchain with the privacy required by enterprise compliance (GDPR/HIPAA).</p>
+                </div>
                 <div>
                     <div class="image-block" style="background-image: url('images/blockchain_banner.webp'); height: 350px;"></div>
-                    </div>
                 </div>
+            </div>
         </section>
 
         <!-- 10. Get Started -->
         <section class="cta-section">
             <h2>Let's Build Your <span>Blockchain Project Together</span></h2>
-            <p class="card-text" style="margin-bottom: 2rem; font-size: 1.2rem;">Our engineers are ready to architect the future.</p>
+            <p style="margin-bottom: 2rem; font-size: 1.2rem;">Our engineers are ready to architect the future.</p>
             <a href="404.html" class="btn-primary" style="font-size: 1.2rem; padding: 1rem 3rem;">Schedule a Consultation</a>
         </section>
+        
         <!-- Footer -->
         <footer class="footer">
             <div id="particles-footer"></div>
             <div class="footer-content">
                 <div class="footer-grid">
                     <div class="footer-col">
-                        <div class="logo" style="margin-bottom: 1rem;"><a href="services.html"><img src="images/logo_0024.webp" alt="Cryption Logo" class="site-logo"></a></div>
+                        <div class="logo" style="margin-bottom: 1rem;"><a href="services.html"><img src="images/logo_0024.webp" alt="Brand Logo" class="site-logo" style="height: 50px; width: auto; max-width: 200px;"></a></div>
                         <p>Empowering the decentralized future with secure and scalable blockchain solutions.</p>
                         <div class="social-icons" style="margin-top: 1.5rem;">
                             <a href="404.html" aria-label="Twitter">
@@ -170,6 +255,24 @@
                         </ul>
                     </div>
                     <div class="footer-col">
+                        <h4>Resources</h4>
+                        <ul>
+                            <li><a href="404.html">Whitepapers</a></li>
+                            <li><a href="404.html">Documentation</a></li>
+                            <li><a href="404.html">API Reference</a></li>
+                            <li><a href="404.html">Community</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-col">
+                        <h4>Company</h4>
+                        <ul>
+                            <li><a href="404.html">Careers</a></li>
+                            <li><a href="404.html">Team</a></li>
+                            <li><a href="404.html">Partners</a></li>
+                            <li><a href="404.html">Press</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-col">
                         <h4>Legal</h4>
                         <ul>
                             <li><a href="404.html">Privacy Policy</a></li>
@@ -185,14 +288,15 @@
                     </div>
                 </div>
                 <div class="footer-bottom">
-                    <p>&copy; 2026 Cryption. All rights reserved.</p>
+                    <p>&copy; 2026 Stackly. All rights reserved.</p>
                 </div>
             </div>
         </footer>
     </div>
     </div>
     </div>
-        <!-- GSAP & ScrollTrigger -->
+    
+    <!-- GSAP & ScrollTrigger -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
     
@@ -226,10 +330,6 @@
     <!-- Custom Scripts -->
     <script src="js/script.js"></script>
     <script src="js/animations.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
 </body>
 </html>
-
-
-
-
-

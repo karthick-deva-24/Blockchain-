@@ -1,4 +1,4 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -9,6 +9,7 @@
     <link rel="stylesheet" href="css/style.css">
 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 </head>
 <body data-page="about">
     <div id="particles-js"></div>
@@ -18,7 +19,7 @@
     <div class="wrapper">
         <!-- Header -->
         <header class="header">
-            <div class="logo"><a href="about.html"><img src="images/logo_0024.webp" alt="Stackly Logo" class="site-logo"></a></div>
+            <div class="logo"><a href="about.html"><img src="images/logo_0024.webp" alt="Brand Logo" class="site-logo" style="height: 50px; width: auto; max-width: 200px;"></a></div>
             <nav class="nav">
                 <ul>
                     <li><a href="index.html">Home</a></li>
@@ -38,10 +39,15 @@
         </header>
 
         <!-- 1. Company Introduction -->
-        <main class="page-header">
-            <h1>Who We Are</h1>
-            <p>Pioneering the Future of Digital Trust</p>
-        </main>
+        <main class="page-header hero-split" style="display: flex; align-items: center; justify-content: space-between; max-width: 1200px; margin: 0 auto; padding: 100px 20px; gap: 40px; text-align: left;">
+    <div class="hero-text" style="flex: 1;">
+        <h1 style="font-size: 3.5rem; margin-bottom: 1rem; color: #fff;">About Stackly</h1>
+        <p style="font-size: 1.2rem; color: #a0aab2;">Pioneering the Decentralized Future</p>
+    </div>
+    <div class="hero-image" style="flex: 1; text-align: right;">
+        <img src="images/hero_about.webp" alt="About Stackly" style="max-width: 100%; border-radius: 20px; box-shadow: 0 20px 40px rgba(0,0,0,0.5);">
+    </div>
+</main>
 
         <!-- 2. Our Story -->
         <section class="section">
@@ -59,10 +65,13 @@
         <!-- 3. Mission -->
         <section class="section section-dark">
             <h2 class="section-title">Our <span>Mission</span></h2>
-            <div class="grid">
-                <div class="card" style="text-align: center;">
-                    <div class="card-icon"><i class="fas fa-bullseye"></i></div>
-                    <p class="card-text" style="font-size: 1.2rem;">To democratize access to secure, scalable, and transparent blockchain technology for businesses of all sizes, eliminating intermediaries and fostering a new era of digital trust.</p>
+            <div class="spotlight-wrapper" style="max-width: 800px; margin: 0 auto;">
+                <div class="spotlight-card" style="text-align: center;">
+                    <div class="spotlight-content">
+                        <img src="images/blockchain_supply.webp" alt="Mission">
+                        <h3>Democratize Access</h3>
+                        <p style="font-size: 1.2rem;">To democratize access to secure, scalable, and transparent blockchain technology for businesses of all sizes, eliminating intermediaries and fostering a new era of digital trust.</p>
+                    </div>
                 </div>
             </div>
         </section>
@@ -70,10 +79,13 @@
         <!-- 4. Vision -->
         <section class="section">
             <h2 class="section-title">Our <span>Vision</span></h2>
-            <div class="grid">
-                <div class="card" style="text-align: center; border-color: rgba(155, 81, 224, 0.5);">
-                    <div class="card-icon" style="color: #9b51e0;"><i class="fas fa-eye"></i></div>
-                    <p class="card-text" style="font-size: 1.2rem;">A fully decentralized global economy where data integrity is guaranteed by mathematics, and every individual has absolute sovereignty over their digital identity and assets.</p>
+            <div class="spotlight-wrapper" style="max-width: 800px; margin: 0 auto;">
+                <div class="spotlight-card" style="text-align: center;">
+                    <div class="spotlight-content">
+                        <img src="images/blockchain_finance.webp" alt="Vision">
+                        <h3>Global Decentralization</h3>
+                        <p style="font-size: 1.2rem;">A fully decentralized global economy where data integrity is guaranteed by mathematics, and every individual has absolute sovereignty over their digital identity and assets.</p>
+                    </div>
                 </div>
             </div>
         </section>
@@ -81,41 +93,95 @@
         <!-- 5. Core Values -->
         <section class="section section-dark">
             <h2 class="section-title">Principles That <span>Guide Every Innovation</span></h2>
-            <div class="grid">
-                <div class="card"><h3 class="card-title">Transparency</h3><p class="card-text">We build open systems and maintain open communication.</p></div>
-                <div class="card"><h3 class="card-title">Security First</h3><p class="card-text">No compromises when it comes to the safety of digital assets.</p></div>
-                <div class="card"><h3 class="card-title">Decentralization</h3><p class="card-text">Distributing power away from single points of failure.</p></div>
+            <div class="bento-grid">
+                <div class="bento-item bento-tall">
+                    <img src="images/blockchain_token.webp" alt="Transparency">
+                    <div class="bento-content">
+                        <h3>Transparency</h3>
+                        <p>We build open systems and maintain open communication across our entire network of developers and partners.</p>
+                    </div>
+                </div>
+                <div class="bento-item bento-wide">
+                    <img src="images/blockchain_health.webp" alt="Security First">
+                    <div class="bento-content">
+                        <h3>Security First</h3>
+                        <p>No compromises when it comes to the safety of digital assets. We employ advanced cryptographic audits for everything.</p>
+                    </div>
+                </div>
+                <div class="bento-item bento-wide">
+                    <img src="images/blockchain_supply.webp" alt="Decentralization">
+                    <div class="bento-content">
+                        <h3>Decentralization</h3>
+                        <p>Distributing power away from single points of failure, ensuring our infrastructure remains resilient globally.</p>
+                    </div>
+                </div>
             </div>
         </section>
 
         <!-- 6. Our Expertise -->
         <section class="section">
             <h2 class="section-title">Deep Expertise in <span>Blockchain Technologies</span></h2>
-            <div class="grid">
-                <div class="card"><h3 class="card-title">L1/L2 Protocols</h3><p class="card-text">Building and scaling foundational network layers.</p></div>
-                <div class="card"><h3 class="card-title">Cryptography</h3><p class="card-text">Advanced implementation of ZK-SNARKs and multi-party computation.</p></div>
-                <div class="card"><h3 class="card-title">Consensus Mechanisms</h3><p class="card-text">Designing robust Proof-of-Stake and custom consensus models.</p></div>
+            <div class="flip-grid">
+                <div class="flip-card">
+                    <div class="flip-card-inner">
+                        <div class="flip-card-front">
+                            <img src="images/blockchain_banner.webp" alt="L1/L2">
+                            <div class="front-title">L1/L2 Protocols</div>
+                        </div>
+                        <div class="flip-card-back">
+                            <h3>L1/L2 Protocols</h3>
+                            <p>Building and scaling foundational network layers to support mass adoption.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="flip-card">
+                    <div class="flip-card-inner">
+                        <div class="flip-card-front">
+                            <img src="images/blockchain_finance.webp" alt="Cryptography">
+                            <div class="front-title">Cryptography</div>
+                        </div>
+                        <div class="flip-card-back">
+                            <h3>Cryptography</h3>
+                            <p>Advanced implementation of ZK-SNARKs and multi-party computation for privacy.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="flip-card">
+                    <div class="flip-card-inner">
+                        <div class="flip-card-front">
+                            <img src="images/blockchain_token.webp" alt="Consensus">
+                            <div class="front-title">Consensus Models</div>
+                        </div>
+                        <div class="flip-card-back">
+                            <h3>Consensus Mechanisms</h3>
+                            <p>Designing robust Proof-of-Stake and custom consensus models for enterprise chains.</p>
+                        </div>
+                    </div>
+                </div>
             </div>
         </section>
 
         <!-- 7. Our Team -->
         <section class="section section-dark">
             <h2 class="section-title">Meet the Experts <span>Behind Our Success</span></h2>
-            <div class="grid">
-                <div class="card" style="text-align: center;">
-                    <img src="images/avatar_ceo.webp" alt="CEO" style="width:100px; height:100px; border-radius:50%; margin-bottom:1rem; object-fit: cover;">
-                    <h3 class="card-title">Alex Mercer</h3>
-                    <p class="card-text">CEO & Founder</p>
+            <div class="team-grid" style="max-width: 1000px; margin: 0 auto;">
+                <div class="team-card">
+                    <img src="images/avatar_ceo.webp" alt="Alex Mercer">
+                    <h3>Alex Mercer</h3>
+                    <span class="role">CEO & Founder</span>
+                    <p>With over 15 years in fintech, Alex leads Stackly's strategic vision, ensuring our decentralized solutions meet enterprise demands globally.</p>
                 </div>
-                <div class="card" style="text-align: center;">
-                    <img src="images/avatar_cto.webp" alt="CTO" style="width:100px; height:100px; border-radius:50%; margin-bottom:1rem; object-fit: cover;">
-                    <h3 class="card-title">Elena Rodriguez</h3>
-                    <p class="card-text">Chief Technology Officer</p>
+                <div class="team-card">
+                    <img src="images/avatar_cto.webp" alt="Elena Rodriguez">
+                    <h3>Elena Rodriguez</h3>
+                    <span class="role">Chief Technology Officer</span>
+                    <p>Elena architectures our core smart contracts and consensus mechanisms, bringing unparalleled security and efficiency to every network we build.</p>
                 </div>
-                <div class="card" style="text-align: center;">
-                    <img src="images/avatar_dev.webp" alt="Lead Dev" style="width:100px; height:100px; border-radius:50%; margin-bottom:1rem; object-fit: cover;">
-                    <h3 class="card-title">James Chen</h3>
-                    <p class="card-text">Lead Solidity Developer</p>
+                <div class="team-card">
+                    <img src="images/avatar_dev.webp" alt="James Chen">
+                    <h3>James Chen</h3>
+                    <span class="role">Lead Solidity Developer</span>
+                    <p>A master of DeFi logic and tokenomics, James optimizes complex smart contracts for low gas fees and maximum throughput.</p>
                 </div>
             </div>
         </section>
@@ -123,11 +189,18 @@
         <!-- 8. Technologies We Use -->
         <section class="section">
             <h2 class="section-title">Modern Blockchain <span>Technology Stack</span></h2>
-            <div class="grid">
-                <div class="card"><h3 class="card-title">Ethereum & Solidity</h3></div>
-                <div class="card"><h3 class="card-title">Solana & Rust</h3></div>
-                <div class="card"><h3 class="card-title">Hyperledger Fabric</h3></div>
-                <div class="card"><h3 class="card-title">IPFS & Filecoin</h3></div>
+            <div class="marquee-container" data-aos="fade-up">
+                <div class="marquee-content" style="animation-duration: 20s;">
+                    <h3 style="display:inline-block; margin: 0 40px; font-size: 2rem; color: #14b8a6;">Ethereum</h3>
+                    <h3 style="display:inline-block; margin: 0 40px; font-size: 2rem; color: #fff;">Solana</h3>
+                    <h3 style="display:inline-block; margin: 0 40px; font-size: 2rem; color: #14b8a6;">Hyperledger</h3>
+                    <h3 style="display:inline-block; margin: 0 40px; font-size: 2rem; color: #fff;">IPFS</h3>
+                    <!-- Duplicate -->
+                    <h3 style="display:inline-block; margin: 0 40px; font-size: 2rem; color: #14b8a6;">Ethereum</h3>
+                    <h3 style="display:inline-block; margin: 0 40px; font-size: 2rem; color: #fff;">Solana</h3>
+                    <h3 style="display:inline-block; margin: 0 40px; font-size: 2rem; color: #14b8a6;">Hyperledger</h3>
+                    <h3 style="display:inline-block; margin: 0 40px; font-size: 2rem; color: #fff;">IPFS</h3>
+                </div>
             </div>
         </section>
 
@@ -135,17 +208,17 @@
         <section class="section section-dark">
             <h2 class="section-title">Our Impact by <span>the Numbers</span></h2>
             <div class="grid grid-3">
-                <div class="card" style="text-align: center; border: none; background: transparent;">
-                    <div class="card-icon" style="font-size: 4rem;">50+</div>
-                    <h3 class="card-title">Enterprise Clients</h3>
+                <div style="text-align: center; padding: 2rem;">
+                    <div style="font-size: 4rem; color: #14b8a6; font-weight: 800; margin-bottom: 1rem;">50+</div>
+                    <h3 style="font-size: 1.5rem; font-weight: 600;">Enterprise Clients</h3>
                 </div>
-                <div class="card" style="text-align: center; border: none; background: transparent;">
-                    <div class="card-icon" style="font-size: 4rem;">$2B+</div>
-                    <h3 class="card-title">Value Secured</h3>
+                <div style="text-align: center; padding: 2rem;">
+                    <div style="font-size: 4rem; color: #c99339; font-weight: 800; margin-bottom: 1rem;">$2B+</div>
+                    <h3 style="font-size: 1.5rem; font-weight: 600;">Value Secured</h3>
                 </div>
-                <div class="card" style="text-align: center; border: none; background: transparent;">
-                    <div class="card-icon" style="font-size: 4rem;">120+</div>
-                    <h3 class="card-title">Smart Contracts Deployed</h3>
+                <div style="text-align: center; padding: 2rem;">
+                    <div style="font-size: 4rem; color: #4a90e2; font-weight: 800; margin-bottom: 1rem;">120+</div>
+                    <h3 style="font-size: 1.5rem; font-weight: 600;">Smart Contracts Deployed</h3>
                 </div>
             </div>
         </section>
@@ -156,7 +229,7 @@
             <div class="footer-content">
                 <div class="footer-grid">
                     <div class="footer-col">
-                        <div class="logo" style="margin-bottom: 1rem;"><a href="about.html"><img src="images/logo_0024.webp" alt="Cryption Logo" class="site-logo"></a></div>
+                        <div class="logo" style="margin-bottom: 1rem;"><a href="about.html"><img src="images/logo_0024.webp" alt="Brand Logo" class="site-logo" style="height: 50px; width: auto; max-width: 200px;"></a></div>
                         <p>Empowering the decentralized future with secure and scalable blockchain solutions.</p>
                         <div class="social-icons" style="margin-top: 1.5rem;">
                             <a href="404.html" aria-label="Twitter">
@@ -181,6 +254,24 @@
                         </ul>
                     </div>
                     <div class="footer-col">
+                        <h4>Resources</h4>
+                        <ul>
+                            <li><a href="404.html">Whitepapers</a></li>
+                            <li><a href="404.html">Documentation</a></li>
+                            <li><a href="404.html">API Reference</a></li>
+                            <li><a href="404.html">Community</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-col">
+                        <h4>Company</h4>
+                        <ul>
+                            <li><a href="404.html">Careers</a></li>
+                            <li><a href="404.html">Team</a></li>
+                            <li><a href="404.html">Partners</a></li>
+                            <li><a href="404.html">Press</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-col">
                         <h4>Legal</h4>
                         <ul>
                             <li><a href="404.html">Privacy Policy</a></li>
@@ -196,7 +287,7 @@
                     </div>
                 </div>
                 <div class="footer-bottom">
-                    <p>&copy; 2026 Cryption. All rights reserved.</p>
+                    <p>&copy; 2026 Stackly. All rights reserved.</p>
                 </div>
             </div>
         </footer>
@@ -238,8 +329,11 @@
     <!-- Custom Scripts -->
     <script src="js/script.js"></script>
     <script src="js/animations.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
 </body>
 </html>
+
+
 
 
 

@@ -18,8 +18,47 @@ function initLenis() {
     gsap.ticker.lagSmoothing(0, 0);
 }
 
+function initAOS() {
+    // Dynamically assign AOS attributes to specific elements
+    document.querySelectorAll('.card').forEach((card, i) => {
+        if (!card.hasAttribute('data-aos')) {
+            card.setAttribute('data-aos', 'fade-up');
+            card.setAttribute('data-aos-delay', (i % 3) * 100);
+        }
+    });
+
+    document.querySelectorAll('.image-block').forEach(img => {
+        if (!img.hasAttribute('data-aos')) {
+            img.setAttribute('data-aos', 'zoom-in');
+            img.setAttribute('data-aos-duration', '800');
+        }
+    });
+
+    if (window.AOS) {
+        AOS.init({
+            duration: 800,
+            once: true,
+            offset: 50,
+        });
+        setTimeout(() => AOS.refreshHard(), 100);
+    }
+}
+
+function initHeroGSAP() {
+    const hero = document.querySelector('.hero');
+    if (hero && !hero.classList.contains('gsap-initialized')) {
+        const tl = gsap.timeline();
+        tl.from('.hero p', { opacity: 0, y: 30, duration: 0.8, ease: 'power3.out', stagger: 0.2 }, "+=0.8")
+          .from('.hero .scroll-down, .hero .hero-actions a, .hero .btn-primary, .hero .btn-text', { opacity: 0, y: 20, duration: 0.8, ease: 'power3.out', stagger: 0.1 }, "-=0.4");
+        hero.classList.add('gsap-initialized');
+    }
+}
+
 function initAnimations() {
     if (window.ScrollTrigger) ScrollTrigger.refresh();
+    initAOS();
+    initHeroGSAP();
+
 
     // 1. SplitType + GSAP Text Reveals
     const titles = document.querySelectorAll('.section-title, h1, h2');
@@ -77,6 +116,18 @@ function initAnimations() {
             });
         }
     });
+
+    // 5. Spotlight Hover Effect
+    document.querySelectorAll('.spotlight-card').forEach(card => {
+        card.addEventListener('mousemove', e => {
+            const rect = card.getBoundingClientRect();
+            const x = e.clientX - rect.left;
+            const y = e.clientY - rect.top;
+            card.style.setProperty('--x', `${x}px`);
+            card.style.setProperty('--y', `${y}px`);
+        });
+    });
+
 }
 
 // 5. Three.js Interactive Visuals
