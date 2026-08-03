@@ -194,6 +194,9 @@ document.addEventListener('DOMContentLoaded', () => {
         transitions: [{
             name: 'opacity-transition',
             leave(data) {
+                // Save scroll position for the current path
+                sessionStorage.setItem('scroll_' + data.current.url.path, window.scrollY);
+
                 return gsap.to(data.current.container, {
                     opacity: 0,
                     y: -20,
@@ -220,8 +223,24 @@ document.addEventListener('DOMContentLoaded', () => {
                     }
                 });
                 
-                // Hack to reset scroll manually for lenis when changing pages
-                window.scrollTo(0,0);
+                // Restore scroll on back/forward, otherwise reset to top
+                if (data.trigger === 'back' || data.trigger === 'forward' || data.trigger === 'popstate') {
+                    const savedScroll = sessionStorage.getItem('scroll_' + data.next.url.path);
+                    if (savedScroll !== null) {
+                        const y = parseInt(savedScroll, 10);
+                        if (typeof lenis !== 'undefined' && lenis) {
+                            lenis.scrollTo(y, { immediate: true });
+                        } else {
+                            window.scrollTo(0, y);
+                        }
+                    } else {
+                        if (typeof lenis !== 'undefined' && lenis) lenis.scrollTo(0, { immediate: true });
+                        else window.scrollTo(0, 0);
+                    }
+                } else {
+                    if (typeof lenis !== 'undefined' && lenis) lenis.scrollTo(0, { immediate: true });
+                    else window.scrollTo(0, 0);
+                }
             }
         }]
     });
