@@ -2,9 +2,11 @@
 // Premium Web Animations (GSAP, Lenis, Barba, etc.)
 // ============================================
 
+const isMobile = () => window.innerWidth <= 768;
+
 let lenis;
 function initLenis() {
-    if (lenis) return;
+    if (lenis || isMobile()) return; // Disable Lenis on mobile for better performance
     lenis = new Lenis({
         duration: 1.2,
         easing: (t) => Math.min(1, 1.001 - Math.pow(2, -10 * t)),
@@ -81,7 +83,7 @@ function initAnimations() {
     });
 
     // 2. Vanilla Tilt on Cards
-    if (window.VanillaTilt) {
+    if (window.VanillaTilt && !isMobile()) {
         VanillaTilt.init(document.querySelectorAll('.card'), {
             max: 15,
             speed: 400,
@@ -91,7 +93,7 @@ function initAnimations() {
     }
 
     // 3. Shery.js Magnetic Effects
-    if (window.Shery) {
+    if (window.Shery && !isMobile()) {
         Shery.makeMagnet(".btn-primary, .nav a", {
             ease: "cubic-bezier(0.23, 1, 0.320, 1)",
             duration: 1
@@ -133,6 +135,7 @@ function initAnimations() {
 // 5. Three.js Interactive Visuals
 let threeInitialized = false;
 function initThree() {
+    if (isMobile()) return; // Disable Three.js on mobile
     const canvasContainer = document.getElementById('three-container');
     if (!canvasContainer || canvasContainer.hasChildNodes()) return;
 

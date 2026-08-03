@@ -1,5 +1,6 @@
 window.initParticles = function(pageType) {
     pageType = pageType || document.body.getAttribute('data-page') || 'home';
+    const isMobile = window.innerWidth <= 768;
 
     // Base config options for different patterns
     let particleConfig = {};
@@ -159,6 +160,9 @@ window.initParticles = function(pageType) {
     const pDiv = document.getElementById('particles-js');
     if (pDiv) {
         pDiv.innerHTML = '';
+        if (isMobile && particleConfig.particles && particleConfig.particles.number) {
+             particleConfig.particles.number.value = Math.floor(particleConfig.particles.number.value / 3);
+        }
         particlesJS("particles-js", particleConfig);
     }
 
@@ -166,9 +170,9 @@ window.initParticles = function(pageType) {
     const fDiv = document.getElementById('particles-footer');
     if (fDiv) {
         fDiv.innerHTML = '';
-        particlesJS("particles-footer", {
+        let footerConfig = {
             "particles": {
-                "number": { "value": 60, "density": { "enable": true, "value_area": 800 } },
+                "number": { "value": isMobile ? 20 : 60, "density": { "enable": true, "value_area": 800 } },
                 "color": { "value": ["#ff9d00", "#ff5e00", "#ffbb00"] }, // Spark colors
                 "shape": { "type": "circle" },
                 "opacity": { "value": 0.8, "random": true, "anim": { "enable": true, "speed": 1, "opacity_min": 0.1, "sync": false } },
@@ -182,18 +186,22 @@ window.initParticles = function(pageType) {
                 "modes": { "bubble": { "distance": 150, "size": 6, "duration": 2, "opacity": 1 }, "repulse": { "distance": 100, "duration": 0.4 } }
             },
             "retina_detect": true
-        });
+        };
+        particlesJS("particles-footer", footerConfig);
     }
 };
 
 document.addEventListener('DOMContentLoaded', function() {
     window.initParticles();
+});
 
-    // Hamburger Menu Logic
-    const mobileMenu = document.getElementById('mobile-menu');
-    const nav = document.querySelector('.nav');
-    if (mobileMenu && nav) {
-        mobileMenu.addEventListener('click', function() {
+// Use event delegation for menus to support Barba.js DOM replacements
+document.addEventListener('click', function(e) {
+    // 1. Hamburger Menu Logic
+    const mobileMenu = e.target.closest('#mobile-menu');
+    if (mobileMenu) {
+        const nav = document.querySelector('.nav');
+        if (nav) {
             nav.classList.toggle('active');
             const icon = mobileMenu.querySelector('i');
             if (icon) {
@@ -207,14 +215,29 @@ document.addEventListener('DOMContentLoaded', function() {
                     document.body.style.overflow = '';
                 }
             }
-        });
+        }
     }
 
-    // Dashboard Menu Logic
-    const dashboardMenuToggle = document.getElementById('dashboard-mobile-menu');
-    const sidebar = document.querySelector('.sidebar');
-    if (dashboardMenuToggle && sidebar) {
-        dashboardMenuToggle.addEventListener('click', function() {
+    // 2. Close mobile menu on link click
+    const navLink = e.target.closest('.nav a');
+    if (navLink) {
+        const nav = document.querySelector('.nav');
+        if (nav && nav.classList.contains('active')) {
+            nav.classList.remove('active');
+            const icon = document.querySelector('#mobile-menu i');
+            if (icon) {
+                icon.classList.remove('fa-times');
+                icon.classList.add('fa-bars');
+            }
+            document.body.style.overflow = '';
+        }
+    }
+
+    // 3. Dashboard Menu Logic
+    const dashboardMenuToggle = e.target.closest('#dashboard-mobile-menu');
+    if (dashboardMenuToggle) {
+        const sidebar = document.querySelector('.sidebar');
+        if (sidebar) {
             sidebar.classList.toggle('active');
             const icon = dashboardMenuToggle.querySelector('i');
             if (icon) {
@@ -228,7 +251,7 @@ document.addEventListener('DOMContentLoaded', function() {
                     document.body.style.overflow = '';
                 }
             }
-        });
+        }
     }
 });
 
