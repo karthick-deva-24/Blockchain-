@@ -87,6 +87,10 @@ ul {
     z-index: 101;
 }
 
+.dashboard-menu-toggle {
+    display: none;
+}
+
 .logo {
     display: flex;
     align-items: center;
@@ -1058,6 +1062,10 @@ select.form-control option {
     }
     
     .nav-notifications {
+        display: none !important;
+    }
+    
+    #profile-email {
         display: none !important;
     }
     

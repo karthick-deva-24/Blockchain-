@@ -46,7 +46,7 @@
                         <span id="profile-email" style="color: #a0aab2; font-size: 0.9rem;">email@example.com</span>
                         <div id="profile-avatar" class="profile-avatar">U</div>
                     </div>
-                    <div class="menu-toggle dashboard-menu-toggle" id="dashboard-mobile-menu" style="display: none;">
+                    <div class="menu-toggle dashboard-menu-toggle" id="dashboard-mobile-menu">
                         <i class="fas fa-bars"></i>
                     </div>
                 </div>
@@ -57,7 +57,7 @@
                 <div id="tab-portfolio" class="tab-pane active">
                     <h3>My Portfolio</h3>
                     <p style="color: #a0aab2; margin-bottom: 2rem;">Overview of your digital assets.</p>
-                    <div class="bento-grid">
+                    <div class="bento-grid" style="margin-bottom: 2rem;">
                         <div class="bento-item bento-large">
                             <img src="images/blockchain_finance.webp" alt="Balance">
                             <div class="bento-content">
@@ -76,6 +76,34 @@
                                     <li>Solana (SOL) <span style="float:right;">10%</span></li>
                                 </ul>
                             </div>
+                        </div>
+                    </div>
+
+                    <h3 style="margin-bottom: 1rem;">Recent Asset Performance</h3>
+                    <div class="spotlight-wrapper">
+                        <div class="spotlight-card" style="padding: 1.5rem; width: 100%;">
+                            <table style="width: 100%; text-align: left; border-collapse: collapse;">
+                                <tr style="border-bottom: 1px solid rgba(255,255,255,0.1); color: #a0aab2;">
+                                    <th style="padding: 1rem;">Asset</th>
+                                    <th style="padding: 1rem;">Price</th>
+                                    <th style="padding: 1rem;">24h Change</th>
+                                </tr>
+                                <tr style="border-bottom: 1px solid rgba(255,255,255,0.05);">
+                                    <td style="padding: 1rem; color: #fff;"><i class="fab fa-bitcoin" style="color: #f2a900; margin-right: 8px;"></i> Bitcoin</td>
+                                    <td style="padding: 1rem; color: #fff;">$64,230.15</td>
+                                    <td style="padding: 1rem; color: #14b8a6;">+2.4% <i class="fas fa-arrow-up"></i></td>
+                                </tr>
+                                <tr style="border-bottom: 1px solid rgba(255,255,255,0.05);">
+                                    <td style="padding: 1rem; color: #fff;"><i class="fab fa-ethereum" style="color: #627eea; margin-right: 8px;"></i> Ethereum</td>
+                                    <td style="padding: 1rem; color: #fff;">$3,450.80</td>
+                                    <td style="padding: 1rem; color: #14b8a6;">+4.1% <i class="fas fa-arrow-up"></i></td>
+                                </tr>
+                                <tr>
+                                    <td style="padding: 1rem; color: #fff;"><span style="color: #14b8a6; margin-right: 8px; font-weight: bold;">S</span> Solana</td>
+                                    <td style="padding: 1rem; color: #fff;">$145.20</td>
+                                    <td style="padding: 1rem; color: #eb5757;">-1.2% <i class="fas fa-arrow-down"></i></td>
+                                </tr>
+                            </table>
                         </div>
                     </div>
                 </div>
@@ -138,10 +166,30 @@
                     <p style="color: #a0aab2; margin-bottom: 2rem;">Get help from the Stackly team.</p>
                     <div class="spotlight-wrapper">
                         <div class="spotlight-card" style="padding: 2rem; width: 100%;">
-                            <div style="text-align: center; padding: 2rem;">
-                                <p style="color: #a0aab2; margin-bottom: 1rem;">You have no active support tickets.</p>
-                                <button class="btn-primary" onclick="window.location.href='404.html';">Open New Ticket</button>
+                            <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 1.5rem;">
+                                <h4 style="margin: 0; color: #fff;">Ticket History</h4>
+                                <button class="btn-primary" style="padding: 0.5rem 1rem; font-size: 0.9rem;" onclick="window.location.href='404.html';">Open New Ticket</button>
                             </div>
+                            <table style="width: 100%; text-align: left; border-collapse: collapse;">
+                                <tr style="border-bottom: 1px solid rgba(255,255,255,0.1); color: #a0aab2;">
+                                    <th style="padding: 1rem;">Ticket ID</th>
+                                    <th style="padding: 1rem;">Subject</th>
+                                    <th style="padding: 1rem;">Status</th>
+                                    <th style="padding: 1rem;">Last Updated</th>
+                                </tr>
+                                <tr style="border-bottom: 1px solid rgba(255,255,255,0.05);">
+                                    <td style="padding: 1rem; color: #fff;">#TK-8942</td>
+                                    <td style="padding: 1rem; color: #fff;">Withdrawal delay inquiry</td>
+                                    <td style="padding: 1rem;"><span style="background: rgba(235,87,87,0.2); color: #eb5757; padding: 0.2rem 0.6rem; border-radius: 12px; font-size: 0.8rem;">Pending</span></td>
+                                    <td style="padding: 1rem; color: #a0aab2;">2 hours ago</td>
+                                </tr>
+                                <tr>
+                                    <td style="padding: 1rem; color: #fff;">#TK-8810</td>
+                                    <td style="padding: 1rem; color: #fff;">Reset 2FA device</td>
+                                    <td style="padding: 1rem;"><span style="background: rgba(20,184,166,0.2); color: #14b8a6; padding: 0.2rem 0.6rem; border-radius: 12px; font-size: 0.8rem;">Resolved</span></td>
+                                    <td style="padding: 1rem; color: #a0aab2;">Aug 01, 2026</td>
+                                </tr>
+                            </table>
                         </div>
                     </div>
                 </div>
@@ -150,11 +198,33 @@
                 <div id="tab-staking" class="tab-pane">
                     <h3>Yield Staking</h3>
                     <p style="color: #a0aab2; margin-bottom: 2rem;">Earn rewards by staking your crypto assets.</p>
-                    <div class="spotlight-wrapper">
-                        <div class="spotlight-card" style="height: 300px; display: flex; align-items: center; justify-content: center; background: rgba(0,0,0,0.2); width: 100%;">
-                            <div style="text-align: center;">
-                                <span style="font-size: 3rem; color: #14b8a6;"><i class="fas fa-university"></i></span>
-                                <p style="color: #a0aab2; margin-top: 1rem;">Staking pools are being calculated. Check back soon.</p>
+                    <div class="grid grid-2" style="gap: 2rem;">
+                        <div class="spotlight-wrapper">
+                            <div class="spotlight-card" style="padding: 2rem;">
+                                <div style="display: flex; align-items: center; gap: 1rem; margin-bottom: 1rem;">
+                                    <i class="fab fa-ethereum" style="font-size: 2rem; color: #627eea;"></i>
+                                    <div>
+                                        <h4 style="margin: 0; color: #fff;">Ethereum Pool</h4>
+                                        <p style="margin: 0; color: #a0aab2; font-size: 0.9rem;">Lockup: 30 Days</p>
+                                    </div>
+                                </div>
+                                <h2 style="color: #14b8a6; margin-bottom: 1.5rem;">4.5% APY</h2>
+                                <p style="color: #a0aab2; font-size: 0.9rem; margin-bottom: 1.5rem;">Stake your ETH to secure the network and earn consistent yield rewards.</p>
+                                <button class="btn-primary" style="width: 100%; border-radius: 8px;" onclick="window.location.href='404.html';">Stake ETH</button>
+                            </div>
+                        </div>
+                        <div class="spotlight-wrapper">
+                            <div class="spotlight-card" style="padding: 2rem;">
+                                <div style="display: flex; align-items: center; gap: 1rem; margin-bottom: 1rem;">
+                                    <span style="font-size: 2rem; color: #14b8a6; font-weight: 800;">S</span>
+                                    <div>
+                                        <h4 style="margin: 0; color: #fff;">Solana Pool</h4>
+                                        <p style="margin: 0; color: #a0aab2; font-size: 0.9rem;">Lockup: 14 Days</p>
+                                    </div>
+                                </div>
+                                <h2 style="color: #14b8a6; margin-bottom: 1.5rem;">7.2% APY</h2>
+                                <p style="color: #a0aab2; font-size: 0.9rem; margin-bottom: 1.5rem;">Participate in high-speed consensus and earn premium yield rewards.</p>
+                                <button class="btn-primary" style="width: 100%; border-radius: 8px;" onclick="window.location.href='404.html';">Stake SOL</button>
                             </div>
                         </div>
                     </div>

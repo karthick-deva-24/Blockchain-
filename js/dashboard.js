@@ -51,6 +51,18 @@ document.addEventListener('DOMContentLoaded', function() {
                 }
             }
 
+            // Close sidebar on mobile after clicking a link
+            const sidebar = document.querySelector('.sidebar');
+            if (sidebar && sidebar.classList.contains('active')) {
+                sidebar.classList.remove('active');
+                const icon = document.querySelector('#dashboard-mobile-menu i');
+                if (icon) {
+                    icon.classList.remove('fa-times');
+                    icon.classList.add('fa-bars');
+                }
+                document.body.style.overflow = '';
+            }
+
             // Initialize Node Network Map Visualization lazily when the Nodes tab is opened
             if (targetId === 'tab-nodes' && !window.nodesMapInitialized) {
                 window.nodesMapInitialized = true;
