@@ -199,6 +199,9 @@ document.addEventListener('DOMContentLoaded', () => {
                 });
             },
             enter(data) {
+                // Clear any leftover overflow hidden from mobile menu
+                document.body.style.overflow = '';
+                
                 // Re-init logic
                 gsap.from(data.next.container, {
                     opacity: 0,

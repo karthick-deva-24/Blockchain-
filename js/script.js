@@ -209,5 +209,26 @@ document.addEventListener('DOMContentLoaded', function() {
             }
         });
     }
+
+    // Dashboard Menu Logic
+    const dashboardMenuToggle = document.getElementById('dashboard-mobile-menu');
+    const sidebar = document.querySelector('.sidebar');
+    if (dashboardMenuToggle && sidebar) {
+        dashboardMenuToggle.addEventListener('click', function() {
+            sidebar.classList.toggle('active');
+            const icon = dashboardMenuToggle.querySelector('i');
+            if (icon) {
+                if (sidebar.classList.contains('active')) {
+                    icon.classList.remove('fa-bars');
+                    icon.classList.add('fa-times');
+                    document.body.style.overflow = 'hidden';
+                } else {
+                    icon.classList.remove('fa-times');
+                    icon.classList.add('fa-bars');
+                    document.body.style.overflow = '';
+                }
+            }
+        });
+    }
 });
 
